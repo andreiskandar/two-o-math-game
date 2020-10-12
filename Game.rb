@@ -20,7 +20,6 @@ end
 class Game
   # when game instatiates, it will take p1, p2 
   attr_accessor :p1, :p2
-
   def initialize(p1, p2)
     @p1 = p1
     @p2 = p2
@@ -29,6 +28,7 @@ class Game
   def game_start
     game_on = true
     turn = true # player1 turn
+
     while(game_on)
       new_question = Question.new
       if(turn)
@@ -53,7 +53,7 @@ class Game
         end
       end
     
-      game_on = @p1.life > 0 && @p2.life > 0
+      game_on = p1.life > 0 && p2.life > 0
     end
 
     if(p1.life > 0) 
