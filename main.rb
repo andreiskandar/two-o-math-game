@@ -1,6 +1,7 @@
+require "./Game"
 require "./Player"
-require "./Question"
+p1 = Player.new
+p2 = Player.new
 
-q = Question.new
-
-puts q.question
+game1 = Game.new(p1, p2)
+game1.game_start

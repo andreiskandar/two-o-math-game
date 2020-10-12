@@ -6,6 +6,11 @@ class Player
     @life = 3
     @total_life = 3
   end
+
+  def get_answer
+    gets.chomp
+  end
+
 end
 
 
